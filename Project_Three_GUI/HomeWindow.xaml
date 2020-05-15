@@ -1,0 +1,16 @@
+﻿<Window x:Class="Project_Three_GUI.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_Three_GUI"
+        mc:Ignorable="d"
+        Title="HomeWindow" WindowState="Maximized" WindowStyle="None">
+    <DockPanel Style="{StaticResource WindowPrimaryBackground}">
+        <Button VerticalAlignment="Top" Content="X" Click="CloseButtonClicked" DockPanel.Dock="Right" Height ="20" Width="20" Style="{StaticResource ButtonColor}"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="HomeStackPanel">
+            <Button Content="Add Resident" HorizontalAlignment="Center" Margin="0 0 0 5" VerticalAlignment="Center" Width="150" x:Name="CreateNewBtn" Style="{StaticResource ButtonColor}" Click="CreateButtonClicked"/>
+            <Button Content="Search Residents" HorizontalAlignment="Center" Margin="0 0 0 5" VerticalAlignment="Center" Width="150" x:Name="QueryBtn" Style="{StaticResource ButtonColor}" Click="QueryButtonClicked"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

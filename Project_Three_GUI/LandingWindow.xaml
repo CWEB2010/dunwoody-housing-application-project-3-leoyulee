@@ -5,10 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_Three_GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBox HorizontalAlignment="Center" Height="23" Margin="0,-30,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120" x:Name="Username"/>
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Center" Width="75"/>
-        <TextBox HorizontalAlignment="Center" Height="23" Margin="0,30,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120" x:Name="Password"/>
-    </Grid>
+        Title="MainWindow" WindowState="Maximized" WindowStyle="None">
+    <DockPanel Style="{StaticResource WindowPrimaryBackground}">
+        <Button  VerticalAlignment="Top" Content="X" Click="CloseButtonClicked" DockPanel.Dock="Right" Height ="20" Width="20" Style="{StaticResource ButtonColor}"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="LoginStackPanel">
+            <TextBox HorizontalAlignment="Center" Margin="0 0 0 5"  Height="23" TextWrapping="Wrap" Text="Username" VerticalAlignment="Center" Width="120" x:Name="UsernameBox"/>
+            <TextBox HorizontalAlignment="Center" Margin="0 0 0 5" Height="23" TextWrapping="Wrap" Text="Password" VerticalAlignment="Center" Width="120" x:Name="PasswordBox"/>
+            <Button Content="Sign In" HorizontalAlignment="Center" Margin="0 0 0 5" VerticalAlignment="Center" Width="75" x:Name="SignInBtn" Style="{StaticResource ButtonColor}" Click="Button_Click"/>
+        </StackPanel>
+    </DockPanel>
+    
 </Window>
